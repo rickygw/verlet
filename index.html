@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Verlet 101</title>
+		<script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="libs/dat.gui/dat.gui.min.js"></script>
+		<script type="text/javascript" src="libs/greensock/TweenMax.min.js"></script>
+		<script type="text/javascript" src="libs/greensock/plugins/CSSPlugin.min.js"></script>
+		<script type="text/javascript" src="libs/greensock/easing/EasePack.min.js"></script>
+		<script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+		<script type="text/javascript" src="libs/require/require.js"></script>
+
+		<link rel="stylesheet" type="text/javascript" href="css/global.css">
+	</head>
+
+	<body>
+
+		<div id="content">
+			<canvas id="display" width="320" height="240"></canvas>
+		</div>
+
+		<script type="text/javascript" src="js/require.config.js"></script>
+		<script type="text/javascript">
+			require(['app'],function(App){
+				App.init();
+			});
+		</script>
+	</body>
+</html>
