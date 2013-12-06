@@ -14,20 +14,14 @@ define([
 		this.stage = new createjs.Stage( this.canvas[0] );
 	};
 
+	Display.prototype.addAvatar = function ( displayobject ) {
+
+		this.stage.addChild(displayobject);
+	};
+
 	Display.prototype.update = function () {
 
 		this.stage.update();
-	};
-
-	Display.prototype.startUpdate = function () {
-
-		this.stopUpdate();
-		this.updateInterval = setInterval( this.update.bind(this), 1000/60 );
-	};
-
-	Display.prototype.stopUpdate = function () {
-
-		clearInterval( this.updateInterval );
 	};
 
 	return Display;

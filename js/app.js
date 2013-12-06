@@ -2,13 +2,13 @@ define([
 	'config',
 	'gui',
 
-	'display'
+	'simulation'
 
 ],function(
 	Config,
 	GUI,
 
-	Display
+	Simulation	
 
 ){
 
@@ -35,9 +35,12 @@ define([
 		// Setup
 		// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
-		Config.Display = new Display( Config.DOM.canvas );
-		Config.Display.init();
-		Config.Display.startUpdate();
+		Config.Simulation = new Simulation( Config.DOM.canvas );
+		Config.Simulation.init();
+
+		// Start
+		// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+		Config.Simulation.start();
 
 	};
 
